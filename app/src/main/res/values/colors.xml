@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Red">#FF0000</color>
+    <color name="Cherry">#ED4C4C</color>
+    <color name="CherryFaint">#FFBDBD</color>
+    <color name="CherryFainter">#FFE6E6</color>
+    <color name="CherryText">#E83939</color>
+    <color name="BlueFaint">#BDD5FF</color>
+    <color name="BlueFainter">#D5E4FF</color>
+    <color name="Blue">#4F82E4</color>
+    <color name="BlueText">#4A7ED2</color>
+    <color name="OrangeFaint">#FFD3B6</color>
+    <color name="OrangeFainter">#FFE6D5</color>
+    <color name="Orange">#E4813F</color>
+    <color name="OrangeText">#D46922</color>
+    <color name="GreenFaint">#bdffe2</color>
+    <color name="GreenFainter">#E3FFF3</color>
+    <color name="Green">#47BF8B</color>
+    <color name="GreenText">#52AF88</color>
+    <color name="Gray">#BBBBBB</color>
+    <color name="DarkGray">#7D7D7D</color>
+    <color name="Tiel">#0CA9A9</color>
+    <color name="TielText">#008080</color>
+    <color name="TielFaint">#b2d8d8</color>
+    <color name="TielFainter">#D4F4F4</color>
+</resources>

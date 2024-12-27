@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".product_list.ProductExpanded">
+
+    <RelativeLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/row1"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/name_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_tiel_faint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/name_value_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:background="@drawable/box_tiel"
+
+
+                    >
+
+                    <TextView
+
+                        android:id="@+id/name_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="محارم ميموزا"
+                        android:fontFamily="@font/rubik_bold"
+                        android:textSize="22dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginBottom="11dp"
+                        android:layout_marginTop="11dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_value_layout"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/code_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:text="73465837465"
+                        android:textAlignment="center"
+                        android:textColor="@color/TielText"
+                        android:fontFamily="@font/rubik_bold"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="3dp"
+                        />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="2dp"
+                        app:layout_constraintLeft_toRightOf="@id/code_value"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/icon_copy"
+                        android:clickable="true"
+                        android:onClick="copycode"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_value_layout"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/latest_price_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/box_tiel_outline"
+
+                    >
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/gv50insiderow1"
+                        android:orientation="vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintGuide_percent="0.5"
+                        />
+
+                    <TextView
+                        android:id="@+id/latest_price_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/TielText"
+                        android:textStyle="bold"
+                        android:text="أحدث سعر جملة"
+                        android:fontFamily="@font/rubik_bold"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/gv50insiderow1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/latest_price_value_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/gv50insiderow1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:background="@drawable/box_tiel"
+                        >
+
+                        <TextView
+                            android:id="@+id/latest_price_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="7000"
+                            android:fontFamily="@font/rubik_bold"
+                            android:textSize="21dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/latest_price_layout"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/latest_price_retail_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/box_tiel_outline"
+                    >
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/gv50insiderow2"
+                        android:orientation="vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintGuide_percent="0.5"
+                        />
+
+                    <TextView
+                        android:id="@+id/latest_price_retail_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/TielText"
+                        android:textStyle="bold"
+                        android:text="أحدث سعر مبيع"
+                        android:fontFamily="@font/rubik_bold"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/gv50insiderow2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/latest_price_retail_value_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/gv50insiderow2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:background="@drawable/box_tiel"
+
+
+                        >
+
+                        <TextView
+                            android:id="@+id/latest_price_retail_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="7000"
+                            android:fontFamily="@font/rubik_bold"
+                            android:textSize="21dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/latest_price_retail_layout"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/profits_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/box_tiel_outline"
+                    >
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/gv50insiderow3"
+                        android:orientation="vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintGuide_percent="0.5"
+                        />
+
+                    <TextView
+                        android:id="@+id/profit_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/TielText"
+                        android:textStyle="bold"
+                        android:text="مجموع أرباح المادة"
+                        android:fontFamily="@font/rubik_bold"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/gv50insiderow3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profit_value_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/gv50insiderow3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:background="@drawable/box_tiel"
+
+
+                        >
+
+                        <TextView
+                            android:id="@+id/profit_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="7000"
+                            android:fontFamily="@font/rubik_bold"
+                            android:textSize="21dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/row2"
+            android:layout_below="@id/row1"
+            android:background="@drawable/box_blue_faint"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gh35row2"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="24dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gv50row2"
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintGuide_percent="0.5"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inserts_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_blue_faint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/gv50row2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/inserts_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="عدد المدخولات"
+                    android:textAlignment="center"
+                    android:textColor="@color/BlueText"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inserts_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv50row2"
+                android:background="@drawable/box_blue_faint"
+                >
+
+                <TextView
+                    android:id="@+id/inserts_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/BlueText"
+                    android:textStyle="bold"
+                    android:text="54"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inserts_value_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_blue_faint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row2"
+                >
+
+                <TextView
+                    android:id="@+id/inserts_value_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="قيمة المدخولات"
+                    android:textAlignment="center"
+                    android:textColor="@color/BlueText"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inserts_value_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/box_blue"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/inserts_value_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="7000"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/row3"
+            android:layout_below="@id/row2"
+            android:background="@drawable/box_green_faint"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gh35row3"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="24dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gv50row3"
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintGuide_percent="0.5"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sales_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_green_faint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/gv50row3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/sales_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="عدد المبيعات"
+                    android:textAlignment="center"
+                    android:textColor="@color/GreenText"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sale_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv50row3"
+
+                >
+
+                <TextView
+                    android:id="@+id/sale_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/GreenText"
+                    android:textStyle="bold"
+                    android:text="54"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sales_value_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_green_faint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row3"
+                >
+
+                <TextView
+                    android:id="@+id/sales_value_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="قيمة المبيعات"
+                    android:textAlignment="center"
+                    android:textColor="@color/GreenText"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sales_value_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/box_green"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/sale_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="7000"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/row4"
+            android:layout_below="@id/row3"
+            android:background="@drawable/box_red_faint"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gh35row4"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="24dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gv50row4"
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintGuide_percent="0.5"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/diffs_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/gv50row4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/diffs_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="عدد الفروقات"
+                    android:textAlignment="center"
+                    android:textColor="@color/Cherry"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/diffs_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv50row4"
+
+                >
+
+                <TextView
+                    android:id="@+id/diffs_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/Cherry"
+                    android:textStyle="bold"
+                    android:text="54"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/diffs_value_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_red_faint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row4"
+                >
+
+                <TextView
+                    android:id="@+id/diffs_value_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="قيمة الفروقات"
+                    android:textAlignment="center"
+                    android:textColor="@color/Cherry"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/diffs_value_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/box_red"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/diffs_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="7000"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/row5"
+            android:layout_below="@id/row4"
+            android:background="@drawable/box_green_outline"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gh35row5"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="24dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gv50row5"
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintGuide_percent="0.5"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inventory_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/gv50row5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/inventory_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="عدد الموجودات"
+                    android:textAlignment="center"
+                    android:textColor="@color/GreenText"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inventory_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv50row5"
+
+                >
+
+                <TextView
+                    android:id="@+id/inventory_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/GreenText"
+                    android:textStyle="bold"
+                    android:text="54"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inventory_value_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_green_outline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row5"
+                >
+
+                <TextView
+                    android:id="@+id/inventory_value_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="قيمة الموجودات"
+                    android:textAlignment="center"
+                    android:textColor="@color/GreenText"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/invenory_value_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gh35row5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv50row5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/box_green"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/inventory_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="7000"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

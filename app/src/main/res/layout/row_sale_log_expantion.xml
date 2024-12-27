@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout"
+    android:layout_gravity="left"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/seperator_top">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/box_green"
+        android:id="@+id/sale_item_profit_lo"
+
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/sale_item_profit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4000"
+            android:fontFamily="@font/rubik_bold"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:autoSizeStepGranularity="1dp"
+            android:autoSizeMinTextSize="11dp"
+            android:autoSizeMaxTextSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/white"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/sale_item_profit_lo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/box_orange"
+                android:id="@+id/sale_item_wholesale_lo"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/sale_item_wholesale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28000"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeMinTextSize="11dp"
+                    android:autoSizeMaxTextSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/sale_item_wholesale_lo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/box_blue_outline"
+                android:id="@+id/sale_item_count_lo"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/box_blue"
+                    android:id="@+id/sale_item_retail_lo"
+                    >
+
+                    <TextView
+                        android:id="@+id/sale_item_retail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="32000"
+                        android:fontFamily="@font/rubik_bold"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeStepGranularity="1dp"
+                        android:autoSizeMinTextSize="11dp"
+                        android:autoSizeMaxTextSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/sale_item_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X2"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textSize="10dp"
+                    android:gravity="center"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeMinTextSize="9dp"
+                    android:autoSizeMaxTextSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/sale_item_retail_lo"
+                    android:textColor="@color/Blue"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/sale_item_count_lo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/sale_item_name_lo"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        >
+
+            <TextView
+                android:id="@+id/sale_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="أسم المنتج"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="12dp"
+                android:gravity="right"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="1dp"
+                android:autoSizeMinTextSize="11dp"
+                android:autoSizeMaxTextSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

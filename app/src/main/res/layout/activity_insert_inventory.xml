@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inventory_insertion.InsertInventory">
+
+<com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+android:id="@+id/layout_name"
+android:layout_width="360dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="32dp"
+android:layout_marginTop="32dp"
+android:layout_marginEnd="32dp"
+android:hint="Name"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent">
+
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/input_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+</com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:id="@+id/layout_code"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="32dp"
+    android:hint="Code"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layout_name">
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="28dp"
+        />
+
+    <Button
+        android:id="@+id/button_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Scan"
+        app:layout_constraintStart_toStartOf="@+id/input_code"/>
+</com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:id="@+id/layout_number"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="32dp"
+    android:hint="Number Of Peices"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layout_code">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        />
+</com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+android:id="@+id/layout_price"
+android:layout_width="360dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="32dp"
+android:layout_marginTop="10dp"
+android:layout_marginEnd="32dp"
+android:hint="Payed Price"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/layout_number">
+
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/input_price"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    />
+</com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:id="@+id/layout_price_wholesale"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="32dp"
+    android:hint="Wholesale Price"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layout_price"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_wholesale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+</com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:id="@+id/layout_price_retail"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="32dp"
+    android:hint="Retail Price"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layout_price_wholesale"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_retail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+
+        />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:text="SAVE"
+        app:icon="@android:drawable/ic_menu_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear_layout"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/gh50"
+                android:layout_margin="5dp"
+                android:background="@drawable/box_blue"
+                android:id="@+id/salecount_layout"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:id="@+id/sale_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textSize="16dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gh50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/box_green"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                >
+                <ImageView
+
+                    android:id="@+id/arrow_imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_arrow_down"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:tint="@color/white"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_layout"
+                app:layout_constraintRight_toLeftOf="@id/salecount_layout"
+                app:layout_constraintLeft_toRightOf="@+id/gv26"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/sale_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="أسم المنتج"
+                    android:fontFamily="@font/rubik_variablefont_wght"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:textSize="20sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/timerow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/creation_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:gravity="right"
+                    android:text="2024-10-23"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/rubik_bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/creation_date"
+                    android:id="@+id/timerow"
+                    >
+                    <TextView
+                        android:id="@+id/creation_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:text="٠٩:٣٤ ص"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/rubik_bold"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/creation_date_ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#999999"
+                        android:text="(منذ ٥ دقائق)"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/rubik_bold"
+                        app:layout_constraintRight_toLeftOf="@id/creation_date_time"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                         />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"
+                    android:id="@+id/h50"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:id="@+id/titlesleftguid"
+                app:layout_constraintGuide_percent="0.19"
+                android:orientation="vertical"
+                />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/retaillayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/box_blue_faint"
+                app:layout_constraintBottom_toTopOf="@id/gh25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gv26">
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/retaillayout"
+                app:layout_constraintRight_toRightOf="@+id/retaillayout"
+                app:layout_constraintTop_toTopOf="@+id/retaillayout"
+                app:layout_constraintLeft_toRightOf="@id/sale_amount_layout"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="مفرق"
+                    android:gravity="center"
+                    android:textColor="@color/BlueText"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="6sp"
+                    android:autoSizeMaxTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sale_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/gh25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gv19"
+                android:background="@drawable/box_blue"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/retail_sale_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="38"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="8dp"
+                    android:autoSizeMaxTextSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/box_orange_faint"
+                app:layout_constraintBottom_toTopOf="@id/gh50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gh25"
+                app:layout_constraintEnd_toStartOf="@id/gv26">
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                app:layout_constraintLeft_toRightOf="@id/wholesaleamountlayout"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="جملة"
+                    android:gravity="center"
+                    android:textColor="@color/OrangeText"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="6sp"
+                    android:autoSizeMaxTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/wholesaleamountlayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/gh50"
+                app:layout_constraintTop_toBottomOf="@id/gh25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gv19"
+                android:background="@drawable/box_orange"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/wholesale_sale_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="38"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="8dp"
+                    android:autoSizeMaxTextSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/dicountlayout"
+                app:layout_constraintBottom_toBottomOf="@id/gh75"
+                app:layout_constraintTop_toBottomOf="@id/gh50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gv26"
+                android:background="@drawable/box_red_faint"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/dicountlayout"
+                app:layout_constraintRight_toRightOf="@+id/dicountlayout"
+                app:layout_constraintTop_toTopOf="@+id/dicountlayout"
+                app:layout_constraintLeft_toRightOf="@id/discountamountlayout"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="حسم"
+                    android:gravity="center"
+                    android:textColor="@color/CherryText"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="6sp"
+                    android:autoSizeMaxTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/gh75"
+                app:layout_constraintTop_toBottomOf="@id/gh50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gv19"
+                android:background="@drawable/box_red"
+                android:id="@+id/discountamountlayout"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/sale_discount_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="38"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="8dp"
+                    android:autoSizeMaxTextSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gh75"
+                app:layout_constraintEnd_toStartOf="@id/gv26"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/box_green_faint"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/profitlayout"
+                >
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/profitlayout"
+                app:layout_constraintRight_toRightOf="@+id/profitlayout"
+                app:layout_constraintTop_toTopOf="@+id/profitlayout"
+                app:layout_constraintLeft_toRightOf="@id/profitamountlayout"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ربح"
+                    android:gravity="center"
+                    android:textColor="@color/GreenText"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="6sp"
+                    android:autoSizeMaxTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profitamountlayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gh75"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gv19"
+                android:background="@drawable/box_green"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/sale_profit_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="38"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="8dp"
+                    android:autoSizeMaxTextSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25"
+                android:id="@+id/gh25"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"
+                android:id="@+id/gh50"
+                />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gh75"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.75" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gv26"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.27" />
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.19"
+                android:id="@+id/gv19"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandable_layout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/child_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

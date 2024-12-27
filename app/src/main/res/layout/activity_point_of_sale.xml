@@ -1,0 +1,409 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".point_of_sale.PointOfSale"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tabs"
+
+        >
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            android:fontFamily="@font/rubik_bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_p1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="فاتورة ١"
+                android:textAppearance="@style/chipText"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:textColor="@color/TielText"
+                app:closeIcon="@drawable/icon_close"
+                app:chipBackgroundColor="@color/TielFaint"
+                app:checkedIcon="@drawable/icon_home"
+                app:checkedIconTint="@color/TielText"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_p2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chip_p1"
+                android:text="فاتورة ٢"
+                android:textAppearance="@style/chipText"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:textColor="@color/OrangeText"
+                app:closeIcon="@drawable/icon_close"
+                app:chipBackgroundColor="@color/OrangeFaint"
+                android:visibility="gone"
+                app:checkedIcon="@drawable/icon_home"
+                app:checkedIconTint="@color/OrangeText"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_p3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chip_p2"
+                android:text="فاتورة ٣"
+                android:textAppearance="@style/chipText"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:textColor="@color/BlueText"
+                app:closeIcon="@drawable/icon_close"
+                app:chipBackgroundColor="@color/BlueFaint"
+                android:visibility="gone"
+                app:checkedIcon="@drawable/icon_home"
+                app:checkedIconTint="@color/BlueText"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_p4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chip_p3"
+                android:text="فاتورة ٤"
+                android:textAppearance="@style/chipText"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:textColor="@color/CherryText"
+                app:closeIcon="@drawable/icon_close"
+                app:chipBackgroundColor="@color/CherryFaint"
+                android:visibility="gone"
+                app:checkedIcon="@drawable/icon_home"
+                app:checkedIconTint="@color/CherryText"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_p5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chip_p4"
+                android:text="فاتورة ٥"
+                android:textAppearance="@style/chipText"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:textColor="@color/GreenText"
+                app:closeIcon="@drawable/icon_close"
+                app:chipBackgroundColor="@color/GreenFaint"
+                android:visibility="gone"
+                app:checkedIcon="@drawable/icon_home"
+                app:checkedIconTint="@color/GreenText"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chip_p5"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                app:chipIcon="@drawable/icon_add"
+                android:textAppearance="@style/chipText"
+                android:textColor="@color/GreenText"
+                app:chipBackgroundColor="@color/GreenFaint"
+                android:text="➕"
+                />
+        </com.google.android.material.chip.ChipGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/floating_box"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floating_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/box_tiel_faint"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="3dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/row2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="6dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/scan"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/icon_barcode2"
+                android:backgroundTint="@color/TielText"
+                android:onClick="scan"
+                app:elevation="6dp"
+                app:fabSize="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/save"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/icon_add2"
+                android:backgroundTint="@color/TielText"
+                android:onClick="additem"
+                app:elevation="6dp"
+                app:fabSize="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/scan"
+                app:layout_constraintRight_toLeftOf="@+id/manual_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/manual_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/TielText"
+                app:boxStrokeColor="@drawable/text_box_tiel"
+                app:boxStrokeWidth="3dp"
+                app:hintTextColor="@color/TielText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/save"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/manual_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:completionThreshold="1"
+                    android:fontFamily="@font/rubik_bold"
+                    android:hint="إسم المنتج"
+                    android:padding="8dp"
+                    app:elevation="6dp"
+                    app:fabSize="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/save"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="7dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gv38"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.24" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gv76"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.62" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gh35"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.32" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dscount_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/box_red"
+                android:clickable="true"
+                android:onClick="discount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv76"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="الحسم"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/discount_textview_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/box_red_outline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv76"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gh35"
+
+                >
+
+                <TextView
+                    android:id="@+id/discount_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center"
+                    android:text="500"
+                    android:textColor="@color/Cherry"
+                    android:autoSizeTextType="uniform"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/total_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/box_tiel"
+                android:clickable="true"
+                android:onClick="ShowTotalDetails"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv38"
+                app:layout_constraintRight_toLeftOf="@id/gv76"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/total_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="المجموع"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/total_textview_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/box_tiel_outline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gv38"
+                app:layout_constraintRight_toLeftOf="@id/gv76"
+                app:layout_constraintTop_toBottomOf="@id/gh35"
+
+                >
+
+                <TextView
+                    android:id="@+id/total_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center"
+                    android:text="6400"
+                    android:textColor="@color/TielText"
+                    android:autoSizeTextType="uniform"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/box_tiel"
+                android:fontFamily="@font/rubik_bold"
+                android:onClick="finish"
+                android:text="إدخال"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gv38"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
